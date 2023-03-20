@@ -17,7 +17,25 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = {":w!<cr>", desc = "Save File"},
+            ["x"] = {'"_x'},
+            ["X"] = {'"_X'},
+            ["d"] = {'"_d'},
+            ["D"] = {'"_D'},
+            ["c"] = {'"_c'},
+            ["C"] = {'"_C'},
+            ["<C-d>"] = {'"+d'},
+            ["cw"] = {"caw"},
+            ["dw"] = {"daw"},
+            -- ["<C-D>"] = {"\"+D"},
+            ["<C-q>"] = {":bd\n"},
+            ["<C-k>"] = {":m-2\n"},
+            ["<C-j>"] = {":m+1\n"},
+            ["<C-f>"] = {
+                ":lua require('telescope.builtin').live_grep({grep_open_files=true})\n"
+            }
   },
+v = {["d"] = {'"_d'}, ["<C-d>"] = {'"+d'}},
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
